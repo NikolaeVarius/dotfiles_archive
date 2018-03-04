@@ -1,19 +1,16 @@
 - defaults:
     link:
       relink: true
-      create: true
 
 - clean: ['~']
 
 - link:
-    # ~/.dotfiles: ''
+    ~/.dotfiles: ''
     ~/.tmux.conf: dotfiles/tmux/tmux.conf
     ~/.vim: dotfiles/vim/vim
     ~/.vimrc: dotfiles/vim/vimrc
     ~/.config/i3/config: dotfiles/i3/config
     ~/.config/i3status/config: dotfiles/i3status/config
-    ~/.zpreztorc: dotfiles/zsh/.zpreztorc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [vim +PluginInstall +qall]
